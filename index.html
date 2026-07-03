@@ -3,90 +3,501 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KaidsMotion</title>
+  <title>Dad Mode Detailing | In-Store & Mobile Car Detailing</title>
+  <meta name="description" content="Dad Mode Detailing — in-store and mobile car detailing that treats your ride like family. Book your detail online in minutes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+
+  <div class="progress-bar" id="progressBar"></div>
+
+  <header id="siteHeader">
+    <nav class="navbar">
+      <a href="#home" class="logo">🚗 <span>DAD MODE</span> DETAILING</a>
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="tel:+15551234567" class="nav-call">📞 (555) 123-4567</a>
+          <a href="#booking" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
   </header>
 
-  <section class="hero">
-    <p class="location">BASED IN SERBIA</p>
-    <h1><span>Quality</span> Design & Web <span>Development</span> Synergy</h1>
-    <p class="intro">Hi, I'm Andrija, I create intuitive, visually stunning and highly functional web applications.</p>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="hero-content">
+      <p class="badge fade-in">🏆 5-Star Rated &nbsp;•&nbsp; In-Store &amp; Mobile</p>
+      <h1 class="fade-in delay-1">
+        Your Car Deserves <span class="gradient-text">Dad-Level</span> Care
+      </h1>
+      <p class="hero-sub fade-in delay-2">
+        Full-service detailing that comes to <em>you</em> — or bring it by the shop. Real elbow grease,
+        eco-friendly products, and the kind of attention to detail only a dad can deliver.
+      </p>
+      <div class="cta-buttons fade-in delay-3">
+        <a href="#booking" class="btn btn-primary btn-lg">🗓️ Book Your Detail</a>
+        <a href="tel:+15551234567" class="btn btn-outline btn-lg">📞 Call Now</a>
+      </div>
+      <div class="hero-trust fade-in delay-4">
+        <span>✅ Satisfaction Guaranteed</span>
+        <span>🚐 We Come To You</span>
+        <span>⭐ 4.9/5 from 300+ Dads (and Moms)</span>
+      </div>
+    </div>
+    <a href="#stats" class="scroll-cue" aria-label="Scroll down">⌄</a>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats" id="stats">
+    <div class="stat reveal">
+      <span class="stat-num" data-target="7">0</span><span class="stat-suffix">+</span>
+      <p>Years Detailing</p>
+    </div>
+    <div class="stat reveal">
+      <span class="stat-num" data-target="1200">0</span><span class="stat-suffix">+</span>
+      <p>Cars Detailed</p>
+    </div>
+    <div class="stat reveal">
+      <span class="stat-num" data-target="49" data-decimal="10">0</span><span class="stat-suffix">★</span>
+      <p>Average Rating</p>
+    </div>
+    <div class="stat reveal">
+      <span class="stat-num" data-target="25">0</span><span class="stat-suffix">mi</span>
+      <p>Mobile Radius</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-head reveal">
+      <p class="eyebrow">Services</p>
+      <h2>Two Ways To Get That New-Car Feeling</h2>
+      <p class="section-sub">Choose in-store drop-off or let us roll up to your driveway with the whole rig.</p>
+    </div>
+
+    <div class="location-toggle reveal">
+      <span id="labelInStore" class="active">🏬 In-Store</span>
+      <button id="locationSwitch" class="switch" role="switch" aria-checked="false" aria-label="Toggle between in-store and mobile pricing">
+        <span class="switch-knob"></span>
+      </button>
+      <span id="labelMobile">🚐 Mobile (We Come To You)</span>
+    </div>
+
+    <div class="service-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">🧽</div>
+        <h3>Interior Refresh</h3>
+        <p>Vacuum, deep wipe-down, streak-free windows, floor mats scrubbed, odor eliminator.</p>
+        <div class="price"><span class="price-instore">$89</span><span class="price-mobile">$109</span></div>
+        <a href="#booking" class="btn btn-ghost" data-service="Interior Refresh">Book This →</a>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">✨</div>
+        <h3>Exterior Shine</h3>
+        <p>Hand wash, foam bath, wheel &amp; tire detail, spot-free dry, tire shine finish.</p>
+        <div class="price"><span class="price-instore">$79</span><span class="price-mobile">$99</span></div>
+        <a href="#booking" class="btn btn-ghost" data-service="Exterior Shine">Book This →</a>
+      </div>
+
+      <div class="service-card featured reveal">
+        <div class="ribbon">Most Popular</div>
+        <div class="service-icon">🚗</div>
+        <h3>Full Dad Mode Detail</h3>
+        <p>Everything in Interior + Exterior, plus hand wax, trim dressing &amp; a final quality check.</p>
+        <div class="price"><span class="price-instore">$149</span><span class="price-mobile">$179</span></div>
+        <a href="#booking" class="btn btn-primary" data-service="Full Dad Mode Detail">Book This →</a>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">🛡️</div>
+        <h3>Ceramic Coating</h3>
+        <p>Long-lasting hydrophobic protection with UV resistance and next-level gloss.</p>
+        <div class="price"><span class="price-instore">$299+</span><span class="price-mobile">$329+</span></div>
+        <a href="#booking" class="btn btn-ghost" data-service="Ceramic Coating">Book This →</a>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">🐾</div>
+        <h3>Pet Hair &amp; Odor Removal</h3>
+        <p>Specialized tools to pull embedded pet hair, plus a deep odor-neutralizing treatment.</p>
+        <div class="price"><span class="price-instore">$59</span><span class="price-mobile">$79</span></div>
+        <a href="#booking" class="btn btn-ghost" data-service="Pet Hair & Odor Removal">Book This →</a>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">🚙</div>
+        <h3>Truck / SUV Upgrade</h3>
+        <p>Extra size, extra care — sized-up detailing for trucks, SUVs and 3-row vehicles.</p>
+        <div class="price"><span class="price-instore">+$20</span><span class="price-mobile">+$20</span></div>
+        <a href="#booking" class="btn btn-ghost" data-service="Truck / SUV Upgrade">Book This →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why-us">
+    <div class="section-head reveal">
+      <p class="eyebrow">Why Dad Mode</p>
+      <h2>Detailing With That Dad Touch</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature reveal">
+        <div class="feature-icon">🚐</div>
+        <h4>We Come To You</h4>
+        <p>Fully equipped mobile rig — water &amp; power included. Your driveway becomes our shop.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature-icon">🌱</div>
+        <h4>Eco-Friendly Products</h4>
+        <p>Biodegradable soaps and low-water techniques that are safe for your car and the planet.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature-icon">🔍</div>
+        <h4>Dad-Level Attention to Detail</h4>
+        <p>We check every cupholder, every crevice — the kind of thorough only a dad brings.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature-icon">✅</div>
+        <h4>Satisfaction Guarantee</h4>
+        <p>Not happy? We'll come back and make it right — no questions asked.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature-icon">📅</div>
+        <h4>Easy Online Booking</h4>
+        <p>Pick your service, pick your time, and we handle the rest. No phone tag required.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature-icon">💵</div>
+        <h4>Fair, Transparent Pricing</h4>
+        <p>No hidden fees. What you're quoted is what you pay, every single time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="section-head reveal">
+      <p class="eyebrow">Pricing</p>
+      <h2>Simple Packages, No Surprises</h2>
+      <p class="section-sub">Mobile add-on applies when we come to you. Prices may vary by vehicle size.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card reveal">
+        <h3>Basic Wash</h3>
+        <div class="amount">$49<span>/wash</span></div>
+        <ul>
+          <li>✔ Exterior hand wash</li>
+          <li>✔ Wheel rinse</li>
+          <li>✔ Spot-free dry</li>
+          <li>✔ Quick vacuum</li>
+        </ul>
+        <a href="#booking" class="btn btn-outline" data-service="Basic Wash">Choose Plan</a>
+      </div>
+      <div class="price-card highlighted reveal">
+        <div class="ribbon">Best Value</div>
+        <h3>Full Dad Mode Detail</h3>
+        <div class="amount">$149<span>/detail</span></div>
+        <ul>
+          <li>✔ Full interior deep clean</li>
+          <li>✔ Full exterior wash + wax</li>
+          <li>✔ Odor eliminator</li>
+          <li>✔ Trim &amp; tire dressing</li>
+          <li>✔ Final quality checklist</li>
+        </ul>
+        <a href="#booking" class="btn btn-primary" data-service="Full Dad Mode Detail">Choose Plan</a>
+      </div>
+      <div class="price-card reveal">
+        <h3>Ceramic Protection</h3>
+        <div class="amount">$299<span>/coat</span></div>
+        <ul>
+          <li>✔ Full detail included</li>
+          <li>✔ Ceramic coating application</li>
+          <li>✔ 12-month gloss + protection</li>
+          <li>✔ Priority booking</li>
+        </ul>
+        <a href="#booking" class="btn btn-outline" data-service="Ceramic Coating">Choose Plan</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="section-head reveal">
+      <p class="eyebrow">Gallery</p>
+      <h2>Before &amp; After, Every Time</h2>
+      <p class="section-sub">Hover a card to see the Dad Mode difference.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-card reveal">
+        <div class="side before">🚗<span>Before</span></div>
+        <div class="side after">✨<span>After</span></div>
+      </div>
+      <div class="gallery-card reveal">
+        <div class="side before">🚙<span>Before</span></div>
+        <div class="side after">🌟<span>After</span></div>
+      </div>
+      <div class="gallery-card reveal">
+        <div class="side before">🛻<span>Before</span></div>
+        <div class="side after">💎<span>After</span></div>
+      </div>
+      <div class="gallery-card reveal">
+        <div class="side before">🚕<span>Before</span></div>
+        <div class="side after">✨<span>After</span></div>
+      </div>
+      <div class="gallery-card reveal">
+        <div class="side before">🚐<span>Before</span></div>
+        <div class="side after">🌟<span>After</span></div>
+      </div>
+      <div class="gallery-card reveal">
+        <div class="side before">🚓<span>Before</span></div>
+        <div class="side after">💎<span>After</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews" id="reviews">
+    <div class="section-head reveal">
+      <p class="eyebrow">Reviews</p>
+      <h2>What Our Customers Say</h2>
+    </div>
+    <div class="carousel reveal">
+      <button class="carousel-arrow prev" id="prevReview" aria-label="Previous review">‹</button>
+      <div class="carousel-track" id="carouselTrack">
+        <div class="review-slide active">
+          <p class="stars">★★★★★</p>
+          <p class="quote">"Booked the mobile detail and they showed up right on time. My minivan hasn't looked this good since I drove it off the lot."</p>
+          <p class="author">— Jamie R.</p>
+        </div>
+        <div class="review-slide">
+          <p class="stars">★★★★★</p>
+          <p class="quote">"They got out a juice stain I thought was permanent. Genuinely dad-level patience and attention to detail."</p>
+          <p class="author">— Marcus T.</p>
+        </div>
+        <div class="review-slide">
+          <p class="stars">★★★★★</p>
+          <p class="quote">"Easiest booking experience ever. Picked a time online, got a reminder text, done. Will be a regular."</p>
+          <p class="author">— Priya S.</p>
+        </div>
+        <div class="review-slide">
+          <p class="stars">★★★★★</p>
+          <p class="quote">"The ceramic coat is unreal — water just beads right off. Worth every penny."</p>
+          <p class="author">— Dana W.</p>
+        </div>
+      </div>
+      <button class="carousel-arrow next" id="nextReview" aria-label="Next review">›</button>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="section-head reveal">
+      <p class="eyebrow">FAQ</p>
+      <h2>Good Questions, Straight Answers</h2>
+    </div>
+    <div class="accordion reveal">
+      <div class="accordion-item">
+        <button class="accordion-header">How long does a full detail take? <span>+</span></button>
+        <div class="accordion-body"><p>Most full details take 2–3 hours depending on vehicle size and condition. Basic washes are usually done in under an hour.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Do I need to provide water or power for mobile detailing? <span>+</span></button>
+        <div class="accordion-body"><p>Nope! Our mobile rig carries its own water tank and generator, so we're fully self-sufficient wherever you park.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">What areas do you service? <span>+</span></button>
+        <div class="accordion-body"><p>We detail in-store at our shop and offer mobile service within a 25-mile radius. Enter your address at booking and we'll confirm coverage.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">What forms of payment do you accept? <span>+</span></button>
+        <div class="accordion-body"><p>We accept all major credit/debit cards, Apple Pay, Google Pay, and cash for in-store visits.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">What happens if it rains on my mobile appointment? <span>+</span></button>
+        <div class="accordion-body"><p>We'll reach out to reschedule at no charge — no dad wants to detail a car that's about to get rained on.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Do you offer memberships or recurring bookings? <span>+</span></button>
+        <div class="accordion-body"><p>Yes! Ask about our monthly and bi-weekly maintenance plans when you book — regulars save up to 15%.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="booking" id="booking">
+    <div class="section-head reveal">
+      <p class="eyebrow">Booking</p>
+      <h2>Reserve Your Detail</h2>
+      <p class="section-sub">Fill this out and we'll confirm your appointment by email or text within one business day.</p>
+    </div>
+
+    <form id="bookingForm" class="booking-form reveal" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" placeholder="Jordan Smith" required>
+          <span class="error-msg"></span>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone *</label>
+          <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+          <span class="error-msg"></span>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          <span class="error-msg"></span>
+        </div>
+        <div class="form-group">
+          <label for="vehicle">Vehicle (Year / Make / Model)</label>
+          <input type="text" id="vehicle" name="vehicle" placeholder="2019 Honda CR-V">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="service">Service *</label>
+        <select id="service" name="service" required>
+          <option value="">Select a service…</option>
+          <option>Basic Wash</option>
+          <option>Interior Refresh</option>
+          <option>Exterior Shine</option>
+          <option selected>Full Dad Mode Detail</option>
+          <option>Ceramic Coating</option>
+          <option>Pet Hair & Odor Removal</option>
+          <option>Truck / SUV Upgrade</option>
+        </select>
+        <span class="error-msg"></span>
+      </div>
+
+      <div class="form-group">
+        <label>Location *</label>
+        <div class="radio-group">
+          <label class="radio-pill"><input type="radio" name="location" value="In-Store" checked> 🏬 In-Store</label>
+          <label class="radio-pill"><input type="radio" name="location" value="Mobile"> 🚐 Mobile (We Come To You)</label>
+        </div>
+      </div>
+
+      <div class="form-group hidden" id="addressGroup">
+        <label for="address">Service Address *</label>
+        <input type="text" id="address" name="address" placeholder="123 Main St, Your City">
+        <span class="error-msg"></span>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="date">Preferred Date *</label>
+          <input type="date" id="date" name="date" required>
+          <span class="error-msg"></span>
+        </div>
+        <div class="form-group">
+          <label for="time">Preferred Time *</label>
+          <select id="time" name="time" required>
+            <option value="">Select a time…</option>
+            <option>8:00 AM</option>
+            <option>9:00 AM</option>
+            <option>10:00 AM</option>
+            <option>11:00 AM</option>
+            <option>12:00 PM</option>
+            <option>1:00 PM</option>
+            <option>2:00 PM</option>
+            <option>3:00 PM</option>
+            <option>4:00 PM</option>
+          </select>
+          <span class="error-msg"></span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="notes">Notes (optional)</label>
+        <textarea id="notes" name="notes" rows="3" placeholder="Anything we should know? Stains, pet hair, gate code, etc."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg btn-block" id="submitBtn">
+        <span class="btn-text">🗓️ Request Booking</span>
+      </button>
+      <p class="form-note">We'll open your email app with a pre-filled request so we can confirm your slot fast. Prefer to text? <a href="sms:+15551234567">Tap here to text us instead</a>.</p>
+    </form>
+
+    <div class="success-panel" id="successPanel">
+      <div class="checkmark">✓</div>
+      <h3>Booking Request Sent!</h3>
+      <p>Thanks — we'll confirm your <strong id="successService"></strong> appointment shortly. Keep an eye on your email or phone.</p>
+      <button class="btn btn-outline" id="bookAnotherBtn">Book Another</button>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <h2>Ready for the Dad Mode Treatment?</h2>
+    <p>Book online in under a minute, or give us a call — we'll take it from there.</p>
     <div class="cta-buttons">
-      <button>See My Work</button>
-      <button class="outline">Download CV</button>
+      <a href="#booking" class="btn btn-light btn-lg">Book Your Detail</a>
+      <a href="tel:+15551234567" class="btn btn-outline-light btn-lg">📞 (555) 123-4567</a>
     </div>
   </section>
 
-  <section class="technologies">
-    <h2>Current technologies</h2>
-    <p>I'm proficient in a range of modern technologies that empower me to build highly functional solutions. These are some of my main technologies.</p>
-    <div class="tech-grid">
-      <div class="tech">Figma</div>
-      <div class="tech">TypeScript</div>
-      <div class="tech">React</div>
-      <div class="tech">NextJS</div>
-      <div class="tech">Tailwind</div>
-      <div class="tech">Git</div>
-      <div class="tech">Supabase</div>
-      <div class="tech">NodeJS</div>
-      <div class="tech">MongoDB</div>
-      <div class="tech">Prisma</div>
-      <div class="tech">PostgreSQL</div>
-    </div>
-  </section>
-
-  <section class="portfolio">
-    <h2>My portfolio</h2>
-    <div class="projects">
-      <div class="project-card">
-        <div class="project-image">📸</div>
-        <h3>Shoptidy</h3>
-        <div class="tags">
-          <span>TypeScript</span><span>React</span><span>Redux</span><span>Supabase</span><span>TailwindCSS</span><span>shadcn/ui</span>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-image">📸</div>
-        <h3>SocialSphere</h3>
-        <div class="tags">
-          <span>JavaScript</span><span>React</span><span>CRUD</span><span>Appwrite</span><span>TailwindCSS</span><span>TanStack</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact">
-    <h2>Like what you see? Reach out <a href="mailto:contact@kaidsmotion.com">via email</a> to collaborate!</h2>
-    <button>Schedule call</button>
-  </section>
-
-  <footer>
+  <footer id="contact">
     <div class="footer-columns">
-      <div>© 2024 | All rights reserved.</div>
-      <div>
-        <strong>Navigate</strong><br>
-        Home<br>Work<br>About<br>Contact
+      <div class="footer-brand">
+        <p class="logo">🚗 <span>DAD MODE</span> DETAILING</p>
+        <p>In-store &amp; mobile car detailing that treats your ride like family.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="TikTok">🎵</a>
+        </div>
       </div>
       <div>
-        <strong>Projects</strong><br>
-        Shoptidy<br>SocialSphere<br>NextCut<br>NextFood
+        <strong>Navigate</strong>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
       </div>
       <div>
-        <strong>Socials</strong><br>
-        LinkedIn<br>Github<br>Instagram
+        <strong>Contact</strong>
+        <a href="tel:+15551234567">📞 (555) 123-4567</a>
+        <a href="mailto:hello@dadmodedetailing.com">✉️ hello@dadmodedetailing.com</a>
+        <span>📍 Serving the Greater Metro Area</span>
       </div>
+      <div>
+        <strong>Hours</strong>
+        <span>Mon–Fri: 8am – 6pm</span>
+        <span>Saturday: 9am – 4pm</span>
+        <span>Sunday: Closed</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Dad Mode Detailing. All rights reserved.</span>
     </div>
   </footer>
+
+  <a href="#booking" class="floating-book" id="floatingBook">🗓️ Book Now</a>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
